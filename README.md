@@ -1,6 +1,6 @@
 # EmployCrawler
 
-TODO: Write a gem description
+抓取指定网站公布的招聘信息、主要是各省/市/区教育局发布的招聘信息。
 
 ## Installation
 
@@ -18,7 +18,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    jnedu = EmployCrawler::JneduCrawler.new
+    jnedu.crawl
+    jnedu.content
 
 ## Contributing
 
