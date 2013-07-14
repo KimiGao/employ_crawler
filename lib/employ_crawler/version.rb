@@ -1,0 +1,3 @@
+module EmployCrawler
+  VERSION = "0.0.1"
+end
