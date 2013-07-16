@@ -27,12 +27,13 @@ module EmployCrawler
     def content
       raw_content.css('.C_InfoList').inject([]) do |result, info_list|
         info_list.css('li').each do |post|
-          next unless /招聘/.match(post.css('a').first.text)
+          link = post.at_css('a')
+          next unless /招聘/.match(link.text)
 
           result << {
-            title: post.css('a').first.text,
-            href:  "#{JNEDU_URL}#{post.css('a').first['href']}",
-            date:  post.css('.date').first.text
+            title: link.text,
+            href:  "#{JNEDU_URL}#{link['href']}",
+            date:  post.at_css('.date').text
           }
         end
 
