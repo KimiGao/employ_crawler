@@ -32,7 +32,7 @@ module EmployCrawler
           result << {
             title: link.text,
             href:  "#{YTEDU_URL}#{link['href']}",
-            date:  post.at_css('font').text
+            date:  Date.parse(post.at_css('font').text)
           }
         end
         result

@@ -34,7 +34,7 @@ module EmployCrawler
           result << {
             title: link.text,
             href:  "#{ZDJW_URL}#{link['href']}",
-            date:  post.at_css('.datetime').text
+            date:  Date.parse(post.at_css('.datetime').text)
           }
         end
 
