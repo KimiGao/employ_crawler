@@ -33,7 +33,7 @@ module EmployCrawler
           result << {
             title: link.text,
             href:  "#{QDEDU_URL}#{link['href']}",
-            date:  post.at_css('span').text
+            date:  Date.parse(post.at_css('span').text)
           }
         end
 
