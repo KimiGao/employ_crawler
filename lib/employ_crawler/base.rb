@@ -1,6 +1,7 @@
 # encoding: utf-8
 require 'nokogiri'
 require 'open-uri'
+require 'date'
 
 module EmployCrawler
 
