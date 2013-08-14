@@ -6,7 +6,7 @@ module EmployCrawler
   # 抓取青岛教育局招聘公告
   class QdeduCrawler < EmployCrawler::Base
 
-    QDEDU_SITE = 'http://chushi.qdedu.gov.cn/'
+    QDEDU_SITE = 'http://chushi.qdedu.gov.cn'
 
     QDEDU_URL = "#{QDEDU_SITE}/renshi/renshi/Article/"
 
